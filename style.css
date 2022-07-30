@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f8f8fa;
+}
+/* ---------- CONTAINER --------- */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.container .container-top {
+  padding: 0 0 0 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #4617fe;
+  color: #fff;
+}
+
+.container .container-left .logo {
+  margin: 50px 0 130px;
+  width: 150px;
+  cursor: pointer;
+}
+.container .container-left h1 {
+  position: relative;
+  font-size: 41px;
+  font-weight: 500;
+}
+.container .container-left h1::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: 0;
+  width: 45px;
+  height: 5px;
+  background: #fff;
+}
+.container .container-left p {
+  margin: 10px 0 140px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #c0c0c0;
+}
+
+/* ---------- NAVBAR ------------ */
+.container .container-right {
+  position: relative;
+}
+.container .container-right nav {
+  margin: 30px 70px;
+  width: 650px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.container .container-right nav .list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+.container .container-right nav .list .list-item {
+  margin: 0 15px;
+  cursor: pointer;
+}
+.container .container-right nav .list .list-item a {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #c0c0c0;
+  transition: 0.2s ease-in-out;
+}
+.container .container-right nav .list .list-item .nav-btn {
+  padding: 5px 15px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background: #fff;
+  color: #4617fe;
+  border: 2px solid #4617fe;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.container .container-right nav .list .list-item .nav-btn:hover {
+  border: 2px solid #fff;
+  background: #4617fe;
+  color: #fff;
+}
+.container .container-right nav .list .list-item img {
+  width: 16px;
+}
+.container .container-right .image-1 {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  width: 46vw;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 35px 0 0 35px;
+  box-shadow: 0 8px 20px -7px #888888;
+}
+.container .container-right .image-1 img {
+  width: 850px;
+}
+
+/* ------------------------------ */
+
+/* ----- container bottom ------- */
+.container .container-bottom {
+  margin: 0 0 120px;
+  padding: 40px 0 0 70px;
+}
+.container .container-bottom ul {
+  display: flex;
+  list-style: none;
+}
+.container .container-bottom ul li {
+  margin: 0 30px 0 0;
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+}
+
+/* ------------------------------ */
+
+/* ---- GLOBAL SECTION CSS ------ */
+section {
+  padding: 40px 70px;
+  display: flex;
+}
+section h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+/* ------------------------------ */
+
+/* ------- APIs .api-section ----------*/
+
+.api-section {
+  flex-direction: column;
+}
+.api-section .cards {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.api-section .cards .card {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 250px;
+  transition: 0.2s ease-in;
+}
+.api-section .cards .learn-more {
+  padding: 90px 20px;
+  transition: 0.2s ease-in;
+}
+.api-section .cards .card img,
+.api-section .cards .learn-more img {
+  width: 55px;
+}
+.api-section .cards .card h4 {
+  margin: 25px 0 0;
+  font-size: 22px;
+  font-weight: 500;
+  transition: 0.2s ease-in;
+}
+.api-section .cards .card p {
+  width: 200px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.api-section .cards .card:hover,
+.api-section .cards .card:first-child {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 2px 0 20px -17px #888888;
+}
+.api-section .cards .card:first-child h4 {
+  color: #4617fe;
+}
+.api-section .cards .learn-more:hover {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 2px 0 20px -17px #888888;
+}
+/* ---------------------------------- */
+
+/* ---------- BLOG Section ---------- */
+.blog-section .blogs,
+.blog-section .blogs .blog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blog-section {
+  flex-direction: column;
+}
+.blog-section div.heading {
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.blog-section div.heading h3 {
+  color: #4617fe;
+  cursor: pointer;
+}
+.blog-section .blogs .blog {
+  position: relative;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 50px 10px 10px 10px;
+  box-shadow: 2px 2px 20px -10px #888888;
+  transition: 0.2s ease-in;
+}
+.blog-section .blogs .blog .blog-image {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  background: red;
+  border-radius: 50px 0 0 10px;
+  overflow: hidden;
+}
+.blog-section .blogs .blog img {
+  width: 530px;
+}
+.blog-section .blogs .blog .blog-article {
+  padding: 40px 20px 0 50px;
+}
+.blog-section .blogs .blog .blog-article h5 {
+  font-size: 12px;
+  color: #4617fe;
+}
+.blog-section .blogs .blog .blog-article h3 {
+  margin: 15px 0;
+}
+.blog-section .blogs .blog .blog-article p {
+  width: 15rem;
+  font-size: 12px;
+}
+
+.blog-section .blogs .blog .blog-author span {
+  position: absolute;
+  bottom: -20px;
+  right: 200px;
+  width: 60px;
+  height: 60px;
+  background: #dcdbdb;
+  border: 3px solid #fff;
+  border-radius: 30px;
+}
+.blog-section .blogs .blog .blog-author h5 {
+  position: absolute;
+  bottom: 10px;
+  right: 100px;
+  color: #000;
+}
+
+.blog-section .blogs .blog:hover {
+  box-shadow: 2px 2px 20px #888888;
+}
+/* ---------------------------------- */
+
+/* ------- FORUM section ------------ */
+
+.forum-section {
+  margin: 40px 0 0;
+  padding: 0 0 0 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9edff;
+}
+.forum-section .forum-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.forum-section .forum-left div {
+  margin: 0 0 30px;
+}
+.forum-section .forum-left .heading-top p {
+  width: 30rem;
+  font-size: 14px;
+}
+.forum-section .forum-left .heading-bottom button {
+  margin: 20px 0 0;
+  padding: 9px 15px;
+  background: #4617fe;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+}
+.forum-section .forum-left .heading-bottom button:hover {
+  background: #3812ce;
+}
+.forum-section .forum-img {
+  display: flex;
+  justify-content: center;
+  width: 650px;
+  border-radius: 200px 0 0 0;
+  overflow: hidden;
+}
+.forum-section .forum-img img {
+  width: 700px;
+}
+.forum-section .forum-img {
+  width: 45vw;
+  background-color: red;
+}
+/* ---------------------------------- */
+
+/* ----- SUBSCRIPTION section ------- */
+
+.subscription-section {
+  padding: 120px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+.subscription-section h2 {
+  font-size: 30px;
+}
+.subscription-section h2 span {
+  font-weight: 400;
+}
+.subscription-section div {
+  padding: 3px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e9edff;
+  border-radius: 30px;
+}
+.subscription-section div input {
+  padding: 0 40px;
+  width: 450px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  background: none;
+  outline: none;
+  border: none;
+}
+.subscription-section div button {
+  padding: 15px 40px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #4617fe;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out;
+}
+
+.subscription-section div button:hover {
+  background: #3812ce;
+}
+/* ---------------------------------- */
+
+/* --------- FOOTER section --------- */
+footer ul {
+  list-style: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 30px 70px;
+  background: #4617fe;
+  color: #fff;
+}
+footer .logo {
+  width: 150px;
+}
+footer div {
+  margin: 20px 0;
+  width: 100%;
+}
+footer div,
+footer div ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer div ul li {
+  font-size: 13px;
+  color: #c0c0c0;
+  cursor: pointer;
+}
+footer .page-links span,
+footer .customer-support span {
+  width: 1px;
+  height: 8px;
+  background: #c0c0c0;
+}
+footer .footer-top ul li,
+footer .footer-bottom .customer-support li,
+footer .customer-support span {
+  margin: 0 0 0 20px;
+}
+footer .footer-bottom .page-links li,
+footer .page-links span {
+  margin: 0 20px 0 0;
+}
