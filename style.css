@@ -565,6 +565,11 @@ footer .customer-support span {
 }
 
 @media only screen and (max-width: 425px) {
+  .blog-section div.heading {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+  }
   .blog-section .blogs .blog .blog-article p {
     width: 12em;
   }
