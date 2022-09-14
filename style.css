@@ -8,79 +8,49 @@
 body {
   background: #f8f8fa;
 }
-/* ---------- CONTAINER --------- */
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+.main {
+  margin: 0 auto;
+  max-width: 1440px;
 }
-.container .container-top {
-  padding: 0 0 0 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background: #4617fe;
-  color: #fff;
-}
-
-.container .container-left .logo {
-  margin: 50px 0 130px;
-  width: 150px;
+.logo {
+  width: 7rem;
   cursor: pointer;
 }
-.container .container-left h1 {
-  position: relative;
-  font-size: 41px;
-  font-weight: 500;
+
+/* ---------- CONTAINER --------- */
+.container {
+  background: #4617fe;
 }
-.container .container-left h1::before {
-  content: "";
-  position: absolute;
-  top: -17px;
-  left: 0;
-  width: 45px;
-  height: 5px;
-  background: #fff;
-}
-.container .container-left p {
-  margin: 10px 0 140px;
-  font-size: 18px;
-  font-weight: 300;
-  color: #c0c0c0;
-}
+/* ------------------------------- */
 
 /* ---------- NAVBAR ------------ */
-.container .container-right {
-  position: relative;
-}
-.container .container-right nav {
-  margin: 30px 70px;
-  width: 650px;
+nav {
+  padding: 30px 70px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: flex-start;
 }
-
-.container .container-right nav .list {
+nav .list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   list-style: none;
 }
-.container .container-right nav .list .list-item {
+nav .list .list-item {
   margin: 0 15px;
   cursor: pointer;
 }
-.container .container-right nav .list .list-item a {
+nav .list .list-item a {
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #c0c0c0;
   transition: 0.2s ease-in-out;
 }
-.container .container-right nav .list .list-item .nav-btn {
+nav .list .list-item a:hover {
+  color: #fff;
+}
+nav .list .list-item .nav-btn {
   padding: 5px 15px;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
@@ -93,41 +63,76 @@ body {
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
-.container .container-right nav .list .list-item .nav-btn:hover {
+nav .list .list-item .nav-btn:hover {
   border: 2px solid #fff;
   background: #4617fe;
   color: #fff;
 }
-.container .container-right nav .list .list-item img {
+nav .list .list-item img {
   width: 16px;
 }
-.container .container-right .image-1 {
+nav .menu-icon {
+  display: none;
+}
+/* ------------------------------ */
+
+/* ---------- CONTAINER TOP --------- */
+.container .hero {
+  padding-left: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #fff;
+}
+.container .hero-left {
+  align-self: center;
+}
+.container .hero-left h1 {
+  position: relative;
+  max-width: 22ch;
+  font-size: 41px;
+  font-weight: 500;
+}
+.container .hero-left h1::before {
+  content: "";
   position: absolute;
+  top: -17px;
+  left: 0;
+  width: 45px;
+  height: 5px;
+  background: #fff;
+}
+.container .hero-left p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #c0c0c0;
+}
+.container .hero-image {
+  position: relative;
   right: 0;
+  bottom: -3rem;
   display: flex;
   justify-content: center;
   width: 46vw;
   height: 550px;
   overflow: hidden;
   border-radius: 35px 0 0 35px;
-  box-shadow: 0 8px 20px -7px #888888;
+  box-shadow: 0 8px 20px -7px #0000006b;
 }
-.container .container-right .image-1 img {
+.container .hero-image img {
   width: 850px;
 }
 
-/* ------------------------------ */
-
-/* ----- container bottom ------- */
-.container .container-bottom {
+/* ----- companies ------- */
+.companies {
   margin: 0 0 120px;
   padding: 40px 0 0 70px;
 }
-.container .container-bottom ul {
+.companies ul {
   display: flex;
   list-style: none;
 }
-.container .container-bottom ul li {
+.companies ul li {
   margin: 0 30px 0 0;
   font-size: 30px;
   font-family: "Josefin Sans", sans-serif;
@@ -151,12 +156,13 @@ section h1 {
 /* ------- APIs .api-section ----------*/
 
 .api-section {
+  padding-right: 20px;
   flex-direction: column;
 }
 .api-section .cards {
   margin: 30px 0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: flex-start;
 }
 .api-section .cards .card {
@@ -166,10 +172,12 @@ section h1 {
   align-items: start;
   width: 250px;
   transition: 0.2s ease-in;
+  cursor: pointer;
 }
 .api-section .cards .learn-more {
   padding: 90px 20px;
   transition: 0.2s ease-in;
+  cursor: pointer;
 }
 .api-section .cards .card img,
 .api-section .cards .learn-more img {
@@ -204,14 +212,21 @@ section h1 {
 /* ---------------------------------- */
 
 /* ---------- BLOG Section ---------- */
+.blog-section {
+  flex-direction: column;
+}
+.blog-section .blogs {
+  flex-wrap: wrap;
+  gap: 3rem;
+}
 .blog-section .blogs,
 .blog-section .blogs .blog {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.blog-section {
-  flex-direction: column;
+.blog-section .blogs .blog {
+  cursor: pointer;
 }
 .blog-section div.heading {
   margin: 25px 0;
@@ -235,12 +250,12 @@ section h1 {
   display: flex;
   justify-content: center;
   width: 300px;
-  background: red;
   border-radius: 50px 0 0 10px;
   overflow: hidden;
 }
 .blog-section .blogs .blog img {
   width: 530px;
+  transition: 0.2s ease-in;
 }
 .blog-section .blogs .blog .blog-article {
   padding: 40px 20px 0 50px;
@@ -277,6 +292,9 @@ section h1 {
 .blog-section .blogs .blog:hover {
   box-shadow: 2px 2px 20px #888888;
 }
+.blog-section .blogs .blog:hover img {
+  transform: scale(1.03);
+}
 /* ---------------------------------- */
 
 /* ------- FORUM section ------------ */
@@ -310,6 +328,7 @@ section h1 {
   border: none;
   border-radius: 3px;
   transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 .forum-section .forum-left .heading-bottom button:hover {
   background: #3812ce;
@@ -337,6 +356,8 @@ section h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
   background: #fff;
 }
 .subscription-section h2 {
@@ -373,6 +394,7 @@ section h1 {
   border-radius: 25px;
   text-transform: uppercase;
   transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .subscription-section div button:hover {
@@ -394,18 +416,19 @@ footer {
   background: #4617fe;
   color: #fff;
 }
-footer .logo {
-  width: 150px;
-}
 footer div {
   margin: 20px 0;
   width: 100%;
+}
+footer .footer-bottom {
+  flex-wrap: wrap;
 }
 footer div,
 footer div ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 footer div ul li {
   font-size: 13px;
@@ -418,12 +441,140 @@ footer .customer-support span {
   height: 8px;
   background: #c0c0c0;
 }
-footer .footer-top ul li,
-footer .footer-bottom .customer-support li,
-footer .customer-support span {
-  margin: 0 0 0 20px;
+
+/* Responsive CSS */
+
+@media only screen and (max-width: 1000px) {
+  .container .hero-image {
+    height: 350px;
+  }
+  .companies ul li {
+    font-size: 1.25rem;
+  }
+  .subscription-section div input {
+    padding: 0 13px;
+    width: 15rem;
+  }
+  .blog-section .blogs .blog .blog-image {
+    max-width: 50%;
+  }
 }
-footer .footer-bottom .page-links li,
-footer .page-links span {
-  margin: 0 20px 0 0;
+
+@media only screen and (max-width: 768px) {
+  section h1 {
+    font-size: 1.8rem;
+  }
+  .logo {
+    width: 5.5rem;
+  }
+  nav .list {
+    display: none;
+  }
+  nav .menu-icon {
+    display: block;
+    width: 2rem;
+  }
+  .container .hero-left h1 {
+    font-size: 1.7rem;
+  }
+  .container .hero-image {
+    bottom: 1rem;
+  }
+  .companies {
+    margin: 0;
+  }
+  .companies ul li {
+    font-size: 1.1rem;
+  }
+  .blog-section .blogs,
+  .blog-section .blogs .blog {
+    justify-content: center;
+  }
+  .blog-section .blogs .blog {
+    flex-direction: column;
+    align-items: center;
+  }
+  .blog-section .blogs .blog .blog-image {
+    max-width: 75vw;
+    width: 100%;
+    border-radius: 50px 10px 0 0;
+  }
+  .blog-section .blogs .blog .blog-article {
+    padding: 40px 0;
+  }
+  .forum-section .forum-left {
+    width: 35ch;
+  }
+  .forum-section .forum-left .heading-top p {
+    width: auto;
+  }
+  .subscription-section {
+    justify-content: center;
+  }
+  footer .footer-bottom {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  nav,
+  section,
+  .companies,
+  footer {
+    padding: 30px 5%;
+  }
+  .container .hero {
+    padding: 0;
+    justify-content: center;
+  }
+  .container .hero-left {
+    margin: 7rem 5%;
+  }
+  .container .hero-left h1 {
+    max-width: 27ch;
+  }
+  .container .hero-image {
+    display: none;
+  }
+  .companies ul {
+    justify-content: center;
+  }
+  .companies ul li {
+    font-size: 1rem;
+  }
+  .api-section .cards {
+    justify-content: space-between;
+  }
+  .forum-section {
+    padding: 4rem 0 0 5%;
+    flex-direction: column;
+  }
+  .forum-section .forum-left {
+    width: 40ch;
+  }
+  .forum-section .forum-img {
+    width: 100%;
+  }
+  .subscription-section div {
+    padding-bottom: 10px;
+    flex-direction: column;
+  }
+  .subscription-section div input {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .blog-section .blogs .blog .blog-article p {
+    width: 12em;
+  }
+  .blog-section .blogs .blog .blog-author span {
+    right: 165px;
+  }
+  .blog-section .blogs .blog .blog-author h5 {
+    right: 70px;
+  }
+  .forum-section .forum-left {
+    width: auto;
+  }
 }
